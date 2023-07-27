@@ -14,13 +14,26 @@ public class Rock extends Actor
      */
     public void act()
     {
+        movement();
+        destroy();
     }
     
     public void movement()
     {
+        move(2);
+        setRotation(90);
     }
     
     public void destroy()
     {
+        Actor rocket = getOneIntersectingObject(Rocket.class);
+        World w = getWorld();
+        if (rocket != null)
+        {
+            w.removeObject(rocket);
+            w.removeObject(this);
+            Greenfoot.playSound("nave.wav");
+        }
+        
     }
 }

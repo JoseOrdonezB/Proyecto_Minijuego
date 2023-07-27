@@ -48,5 +48,6 @@ public class MyWorld extends World
         Rock rock8 = new Rock();
         addObject(rock8,22,182);
         rocket.setLocation(198,665);
+        spawner.setLocation(397,749);
     }
 }

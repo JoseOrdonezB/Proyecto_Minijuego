@@ -14,9 +14,15 @@ public class Spawner extends Actor
      */
     public void act()
     {
+        spawn();
     }
     
     public void spawn()
     {
+        World w = getWorld();
+        if(Greenfoot.getRandomNumber(50) == 1)
+        {
+            w.addObject(new Rock(), Greenfoot.getRandomNumber(getY()), 5);
+        }
     }
 }
